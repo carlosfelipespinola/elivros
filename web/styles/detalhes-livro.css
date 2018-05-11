@@ -1,11 +1,10 @@
+/*Estilos usados na pagina detalhes livros*/
 .capa.livro.grande{
     max-width: 200px;
     max-height: 300px;
     height: 100%;
     margin: auto;
 }
-
-
 
 .segment.detalhe.livro{
     max-width: 800px;
@@ -25,11 +24,8 @@
     }
 }
 
-#main.container{
-    max-width: 1400px !important;
-    width: 100%;
-}
 
+/*Redefinindo ui items para pagina de detalhes de livro*/
 .ui.items>.item>.image:not(.ui) {
     width: 120px;
 }
@@ -43,62 +39,3 @@
 }
 
 
-
-.ui.vertical.menu.sidebar.desktop{
-    display: none;
-}
-
-.pusher-content{
-    -webkit-transform: translate3d(0,0,0); 
-    transform: translate3d(0,0,0); 
-    margin-left: 0;
-}
-
-
-@media screen and (min-width: 1175px){
-    #open-menu{
-        display: none;
-    }
-
-    .ui.vertical.menu.sidebar.desktop{
-        display: block;
-    }
-    .pusher-content{
-        -webkit-transform: translate3d(0,0,0); 
-        transform: translate3d(0,0,0); 
-        margin-left: 210px;
-    }
-}
-
-/*
-.ui.left.visible.sidebar, .ui.right.visible.sidebar {
-    display: none;
-}
-
-
-
-
-
-@media screen and (min-width: 1175px){
-    .ui.left.visible.sidebar, .ui.right.visible.sidebar {
-        display: block;
-    }
-}
-*/
-
-
-
-
-.mobile.hidden{
-    display:  none !important;
-}
-
-.mobile.show{
-
-}
-
-@media screen and (min-width: 580px){
-    .mobile.hidden{
-        display: flex !important;
-    }
-}

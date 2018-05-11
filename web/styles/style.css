@@ -1,4 +1,4 @@
-h1, h2{
+h1, h2, h3, h4, h5, h6{
     color: #47525E;
 }
 
@@ -13,7 +13,7 @@ h1, h2{
 }
 
 
-/*Redefinição da sidebar*/
+/*Redefinição dos accordions*/
 .ui.sidebar.vertical.menu .ui.styled.accordion, .ui.styled.accordion .accordion {
     border-left: 0;
     border-right: 0;
@@ -40,38 +40,103 @@ h1, h2{
 }
 
 
+/*Redefinição dos menus*/
 .ui.secondary.menu{
     border-radius: 0;
     box-shadow: none;
 }
 
-.ui.secondary.menu.top{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 472px;
-}
-.ui.icon.input>input.text{
-    border-radius: 30px;
-    background-color: #f1f1f1;
-}
 
 .ui.segment.menu{
     border-radius: 0;
     box-shadow: none;
 }
 
-
-.text-right{
-    text-align: right;
+/*Estendendo menu*/
+.ui.secondary.menu.top.medium{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 472px;
 }
 
-.text-left{
-    text-align: left;
+
+.ui.menu:not(.vertical) .center.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+}
+
+.ui.menu:not(.vertical) .center.menu.fluid {
+    width: 100%;
+}
+
+.ui.menu:not(.vertical) .center.menu .item.fluid {
+    width: 100%;
+}
+
+.ui.menu:not(.vertical) .center.menu .item:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0px;
+}
+
+.ui.fluid.secondary.menu.top {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/*Extendendo estilos para input text com icone*/
+.ui.icon.input>input.text.rounded{
+    border-radius: 30px;
+}
+
+.ui.icon.input>input.text.secondary{
+    background-color: #f1f1f1;
 }
 
 
 
+/*Estilos relacionados a sidebar*/
+#main.container{
+    max-width: 1400px !important;
+    width: 100%;
+}
 
+
+.ui.vertical.menu.sidebar.desktop{
+    display: none;
+}
+
+.pusher-content{
+    -webkit-transform: translate3d(0,0,0); 
+    transform: translate3d(0,0,0); 
+    margin-left: 0;
+}
+
+
+@media screen and (min-width: 1175px){
+    #open-menu{
+        display: none;
+    }
+
+    .ui.vertical.menu.sidebar.desktop{
+        display: block;
+    }
+    .pusher-content{
+        -webkit-transform: translate3d(0,0,0); 
+        transform: translate3d(0,0,0); 
+        margin-left: 210px;
+    }
+}
+
+
+
+/*Classes para controle de visibilidade*/
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
