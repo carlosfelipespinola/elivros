@@ -5,8 +5,10 @@
     margin: auto;
 }
 
+
+
 .segment.detalhe.livro{
-    max-width: 650px;
+    max-width: 800px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -32,7 +34,7 @@
     width: 120px;
 }
 
-.ui.items>.item {
+.ui.items>.item.bordered {
     border: 1px solid rgba(0,0,0,.1);
 }
 
@@ -51,7 +53,13 @@
     transform: translate3d(0,0,0); 
     margin-left: 0;
 }
+
+
 @media screen and (min-width: 1175px){
+    #open-menu{
+        display: none;
+    }
+
     .ui.vertical.menu.sidebar.desktop{
         display: block;
     }
