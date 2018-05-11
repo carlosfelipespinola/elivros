@@ -1,6 +1,75 @@
+h1, h2{
+    color: #47525E;
+}
+
+
+
+/*Redefinição do botao secundario*/
 .ui.secondary.button, .ui.secondary.buttons .button {
     background-color: #47525E;
     color: #fff;
     text-shadow: none;
     background-image: none;
+}
+
+
+/*Redefinição da sidebar*/
+.ui.sidebar.vertical.menu .ui.styled.accordion, .ui.styled.accordion .accordion {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+}
+
+.ui.accordion .accordion .active.content, .ui.accordion .active.content {
+    display: block;
+    background-color: #F9FAFC;
+    color: #8492A6;
+}
+
+.ui.accordion .accordion .active.content, .ui.accordion .active.content a {
+    display: block;
+    background-color: #F9FAFC;
+    color: #8492A6;
+}
+
+
+.ui.styled.accordion .accordion .title, .ui.styled.accordion .title .dropdown.icon{
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+}
+
+.ui.visible.left.sidebar~.fixed, .ui.visible.left.sidebar~.pusher{
+    webkit-transform: translate3d(0,0,0); 
+    transform: translate3d(0,0,0); 
+    margin-left: 260px;
+}
+
+.ui.secondary.menu{
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ui.secondary.menu.top{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 472px;
+}
+.ui.icon.input>input.text{
+    border-radius: 30px;
+    background-color: #f1f1f1;
+}
+
+.ui.segment.menu{
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
 }
