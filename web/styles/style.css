@@ -1,0 +1,6 @@
+.ui.secondary.button, .ui.secondary.buttons .button {
+    background-color: #47525E;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
+}
