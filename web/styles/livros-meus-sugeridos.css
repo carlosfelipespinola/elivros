@@ -15,6 +15,14 @@
     margin-left: auto;
 }
 
+
+
+.ui.card.wide {
+        max-width: 1600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
 @media screen and (min-width: 992px){
     .segment.livros{
         margin-right: 0;
