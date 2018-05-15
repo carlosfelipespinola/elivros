@@ -28,7 +28,7 @@
             </div>
             <div class="content">
                 <div class="item">Minha Conta</div>
-                <div class="item">Sair</div>
+                <div class="item"><a href="login.html">Sair</a></div>
             </div>
         </div>
     </div>
@@ -53,13 +53,10 @@
             <!--MENU DESKTOP-->
             <div class="ui secondary menu top medium mobile hidden tablet hidden">
 
-                <a class="active item">
+                <a href="livros-sugeridos.html" class="active item">
                     Inicio
                 </a>
 
-                <a class="item">
-                    Novidades
-                </a>
                 <div class="ui simple dropdown item">
                     Categorias
                     <i class="dropdown icon"></i>
@@ -81,11 +78,11 @@
                     </div>
                 </div>
 
-                <div class="item">
+                <a href="meus-livros.html" class="item">
                     Minha lista
-                </div>
+                </a>
 
-                <div class="item">Comprados</div>
+                <a href="meus-livros.html" class="item">Meus Livros</a>
 
                 <div class="item">
                     <div class="ui icon input">
@@ -99,7 +96,7 @@
                     <i class="dropdown icon"></i>
                     <div class="menu">
                         <div class="item">Minha Conta</div>
-                        <div class="item">Sair</div>
+                        <a href="./login.html" class="item">Sair</a>
                     </div>
                 </div>
             </div>
@@ -129,83 +126,105 @@
             </div>
         </h2>
 
-
-        <div class="ui centered card">
-            <div class="input">
-                <a class="ui medium header">Meu perfil de dados de acesso</a>
+        <div class="ui container">
+            <div class="centered ui segment small">
+                <div class="ui centered grid">
+                    <div class="row ">
+                        <div class="column text center"><a class="ui medium header">Meu perfil de dados de acesso</a></div>
+                    </div>
+                    <div class="six wide tablet eight wide computer column ">
+                            <div class="ui tiny header">Nome:
+                                    <span>
+                                        <i>Gabriel Rodrigues da Silva Pires</i>
+                                    </span>
+                                </div>
+                    </div>
+                    <div class="six wide tablet eight wide computer column">
+                            <div class="ui tiny header">Email:
+                                    <span>
+                                        <i>gabrielrsp18@gmail.com</i>
+                                    </span>
+                                </div>
+                    </div>
+                    <div class="six wide tablet eight wide computer column">
+                            <div class="ui tiny header">Telefone:
+                                    <span>
+                                        <i>5555-5555</i>
+                                    </span>
+                                </div>
+                    </div>
+                    <div class="six wide tablet eight wide computer column">
+                            <div class="ui tiny header">Senha:
+                                    <span>
+                                        <i>**********</i>
+                                    </span>
+                                </div>
+                    </div>
+                    <div class="six wide tablet eight wide computer column">
+                            <button class="ui secondary button medium">Editar</button>
+                    </div>
+                </div>
             </div>
-            <div class="content">
+    
+    
+            <div class="ui centered segment small">
+                <div class="ui centered grid">
+                    <div class="row">
+                        <div class="column">
 
-                <div class="ui tiny header">Nome:
-                    <span>
-                        <i>Gabriel Rodrigues da Silva Pires</i>
-                    </span>
-                </div>
-
-                <div class="ui tiny header">Email:
-                    <span>
-                        <i>gabrielrsp18@gmail.com</i>
-                    </span>
-                </div>
-
-                <div class="ui tiny header">Telefone:
-                    <span>
-                        <i>5555-5555</i>
-                    </span>
-                </div>
-
-                <div class="ui tiny header">Senha:
-                    <span>
-                        <i>**********</i>
-                    </span>
-                </div>
-
+                            <div class="input">
+                                <a class="ui medium header">Assinaturas ativas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sixteen wide column">
+                            <div class="ui tiny header">Assinatura:
+                                    <span>
+                                        <i>Livro Sistemas de informação ilimitado</i>
+                                    </span>
+                            </div>
+                            <div class="ui tiny header">Assinatura:
+                                <span>
+                                    <i>Diversão Ilimitada</i>
+                                </span>
+                            </div>
+                    </div>
+                    <div class="six wide tablet eight wide computer column">
+                        <button class="ui secondary button">Editar</button>
+                    </div>
+                </div> 
             </div>
-            <button class="ui secondary button">Editar</button>
+
+            <div class="ui centered segment small">
+                    <div class="ui centered grid">
+                        <div class="row">
+                            <div class="column">
+                                <div class="input">
+                                    <a class="ui medium header">Dados de cobrança</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sixteen wide column">
+                                <div class="ui tiny header">Cobrança:
+                                        <span>
+                                            <i>Master Card - 5544 **** **** **10</i>
+                                        </span>
+                                    </div>
+                    
+                                    <div class="ui tiny header">Forma de pagamento:
+                                        <span>
+                                            <i>Débito em conta Bradesco</i>
+                                        </span>
+                                    </div>
+                        </div>
+                        <div class="six wide tablet eight wide computer column">
+                            <button class="ui secondary button">Editar</button>
+                        </div>
+                    </div> 
+                </div>
+    
         </div>
-
-
-        <div class="ui centered card">
-            <div class="input">
-                <a class="ui medium header">Assinaturas ativas</a>
-            </div>
-            <div class="content">
-                <div class="ui tiny header">Assinatura:
-                    <span>
-                        <i>Livro Sistemas de informação ilimitado</i>
-                    </span>
-                </div>
-                <div class="ui tiny header">Assinatura:
-                    <span>
-                        <i>Diversão Ilimitada</i>
-                    </span>
-                </div>
-
-            </div>
-            <button class="ui secondary button">Editar</button>
-        </div>
-
-        <div class="ui centered card">
-            <div class="input">
-                <a class="ui medium header">Dados de cobrança</a>
-            </div>
-            <div class="content">
-
-                <div class="ui tiny header">Cobrança:
-                    <span>
-                        <i>Master Card - 5544 **** **** **10</i>
-                    </span>
-                </div>
-
-                <div class="ui tiny header">Forma de pagamento:
-                    <span>
-                        <i>Débito em conta Bradesco</i>
-                    </span>
-                </div>
-
-            </div>
-            <button class="ui secondary button">Editar</button>
-        </div>
+        
 
 
 

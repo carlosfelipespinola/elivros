@@ -252,3 +252,14 @@ h1, h2, h3, h4, h5, h6{
 body, body.pushable, body.pushable>.pusher{
     background: whitesmoke!important;
 } 
+
+.segment.small{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.text.center{
+    text-align: center!important;
+}
