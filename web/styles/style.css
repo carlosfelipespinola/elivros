@@ -57,7 +57,20 @@ h1, h2, h3, h4, h5, h6{
 .ui.secondary.menu.top.medium{
     margin-left: auto;
     margin-right: auto;
-    max-width: 472px;
+    max-width: 1400px;
+    width: 100%;
+    padding-left: 0px;
+}
+
+@media only screen and (min-width: 1400px){
+    .ui.secondary.menu.top.medium{
+        padding-left: 140px;
+    }
+}
+
+.ui.secondary.menu.top.right{
+    margin-left: auto;
+    margin-right: 0;
 }
 
 
