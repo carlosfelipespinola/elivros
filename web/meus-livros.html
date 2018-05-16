@@ -1,309 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles/semantic.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/livros-meus-sugeridos.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./styles/semantic.min.css">
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="stylesheet" href="./styles/livros-meus-sugeridos.css">
+	<title>Document</title>
 </head>
+
 <body>
 
-    <div id="sidebar" class="ui sidebar vertical fixed sticky menu">
-                <div class="ui styled" style="margin-top: 48px">
-                    <a class="active item">Inicio</a>
-                    <a class="item">Novidades</a>
-                    <div class="item">Minha lista</div>
-                    <div class="item">Comprados</div>  
-                </div>
-                <!--SIDEBAR MOBILE-->
-                <div class="ui styled accordion">
-                    <div class="title"><span class="text-left">Carlos Felipe</span> <i class="dropdown icon text-right"></i></div>
-                    <div class="content">
-                        <div class="item">Minha Conta</div>
-                        <div class="item">Sair</div>
-                    </div>
-                </div>
-            </div>
-  
-            <div class="pusher">
+	<div id="sidebar" class="ui sidebar vertical fixed sticky menu">
+		<div class="ui styled" style="margin-top: 48px">
+			<a class="active item">Inicio</a>
+			<a class="item">Novidades</a>
+			<div class="item">Minha lista</div>
+			<div class="item">Comprados</div>
+		</div>
+		<!--SIDEBAR MOBILE-->
+		<div class="ui styled accordion">
+			<div class="title">
+				<span class="text-left">Carlos Felipe</span>
+				<i class="dropdown icon text-right"></i>
+			</div>
+			<div class="content">
+				<div class="item">Minha Conta</div>
+				<div class="item">Sair</div>
+			</div>
+		</div>
+	</div>
 
-                    <!--MENU MOBILE-->
-                    <div class="ui top attached demo menu">
-                        <a id="open-menu" class="item mobile only tablet only">
-                            <i class="sidebar icon"></i>
-                            Menu
-                        </a>
-                        <div class="center menu fluid mobile only tablet only">
-                            <div class="fluid item">
-                                <div class="ui icon input">
-                                    <input class="fluid secondary input text rounded" type="text" placeholder="Search...">
-                                    <i class="search link icon"></i>
-                                </div>
-                            </div>
-                        </div>
-                                                
-                        <!--MENU DESKTOP-->							
-                        <div class="ui secondary menu top medium mobile hidden tablet hidden">
-                                
-                                <a href="./livros-sugeridos.html" class=" item">
-                                    Inicio
-                                </a>
-            
-            
-                                
-                                
-                                <div class="ui simple dropdown item">
-                                    Categorias
-                                    <i class="dropdown icon"></i>
-                                    <div class="menu">
-                                        <div class="item">Auto ajuda</div>
-                                        <div class="item">Biografias</div>
-                                        <div class="item">Business</div>
-                                        <div class="item">Educação</div>
-                                        <div class="item">Fantasia</div>
-                                        <div class="item">Ficção Cientifica</div>
-                                        <div class="item">Física</div>
-                                        <div class="item">Infantil</div>
-                                        <div class="item">Investimentos</div>
-                                        <div class="item">Literatura</div>
-                                        <div class="item">História</div>
-                                        <div class="item">Humor</div>
-                                        <div class="item">Matematica</div>
-                                        <div class="item">Poesias</div>
-                                    </div>
-                                </div>
-            
-                                <a href="./meus-livros.html" class="item active">
-                                    Minha lista
-                                </a>
-            
-                                <a href="./meus-livros.html" class="item">Comprados</a>
-                                
-                                <div class="item">
-                                    <div class="ui icon input">
-                                        <input class="secondary input text rounded" type="text" placeholder="Search...">
-                                        <i class="search link icon"></i>
-                                    </div>
-                                </div>      
-                            
-                                <div class="ui right simple dropdown item">
-                                    Carlos Felipe
-                                    <i class="dropdown icon"></i>
-                                    <div class="menu">
-                                        <a href="./configuracoes.html" class="item">Minha Conta</a>
-                                        <a href="./login.html" class="item">Sair</a>
-                                    </div>
-                                </div>                    
-                        </div>
-                    </div>
-                    
-                    <!--LISTA DE CATEGORIAS MOSTRADA NO MENU MOBILE-->
-                    <div class="ui top fluid secondary menu mobile only tablet only" style="margin: 0;overflow-x: scroll">
-                        <a class="item">Auto Ajuda</a>
-                        <a class="item">Biografias</a>
-                        <a class="item">Business</a>
-                        <a class="item">Educação</a>
-                        <a class="item">Fantasia</a>
-                        <a class="item">Ficção Cientifica</a>
-                        <a class="item">Infatil</a>
-                        <div class="item">Investimentos</div>
-                        <a class="item">Literatura</a>
-                        <a class="item">História</a>
-                        <a class="item">Humor</a>
-                    </div>
-            <!--CONTAINER COM O CONTEUDO DO SITE-->					
-            <div id="main" class="ui container ">
-                    
-                <div class="ui grid">
-                    <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
-                        <h1>Meus Livros</h1>
-                    </div>
-                    <!--OUTROS LIVROS DO AUTOR-->
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+	<div class="pusher">
 
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+		<!--MENU MOBILE-->
+		<div class="ui top attached demo menu">
+			<a id="open-menu" class="item mobile only tablet only">
+				<i class="sidebar icon"></i>
+				Menu
+			</a>
+			<div class="center menu fluid mobile only tablet only">
+				<div class="fluid item">
+					<div class="ui icon input">
+						<input class="fluid secondary input text rounded" type="text" placeholder="Search...">
+						<i class="search link icon"></i>
+					</div>
+				</div>
+			</div>
 
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+			<!--MENU DESKTOP-->
+			<div class="ui secondary menu top medium mobile hidden tablet hidden">
 
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="seven wide mobile five wide tablet three wide computer column">
-                        <div class="ui segment livros">
-                            <div class="item bordered">
-                                <div class="image">
-                                    <img src="./img/javaimg.jpg">
-                                </div>
-                                <div class="content">
-                                    <a class="header">Java rápido e fácil</a>
-                                    <div class="extra">
-                                        <div class="ui rating" data-max-rating="5"></div>
-                                    </div>
-                                    <div>
-                                        <p class="preco">R$ 30,00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>						
-
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/semantic.min.js"></script>
-
-    <script>
-        $sidebar = $('#sidebar').sidebar({
-            dimPage: false,
-            transition: 'push',
-            exclusive: false,
-        });
-        //.sidebar('toggle');
-
-        $('#open-menu').on('click',function(){
-            console.log('clicked');
-            $sidebar.sidebar('toggle');
-        })
-        $('.ui.accordion').accordion();
-
-        $('.browse.item')
-        .popup({
-            popup: '.fluid.popup'
-        });
+				<a href="./livros-sugeridos.html" class=" item">
+					Inicio
+				</a>
 
 
-        $('.rating')
-        .rating('disable');
-  
-    </script>
+
+
+				<div class="ui simple dropdown item">
+					Categorias
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						<div class="item">Auto ajuda</div>
+						<div class="item">Biografias</div>
+						<div class="item">Business</div>
+						<div class="item">Educação</div>
+						<div class="item">Fantasia</div>
+						<div class="item">Ficção Cientifica</div>
+						<div class="item">Física</div>
+						<div class="item">Infantil</div>
+						<div class="item">Investimentos</div>
+						<div class="item">Literatura</div>
+						<div class="item">História</div>
+						<div class="item">Humor</div>
+						<div class="item">Matematica</div>
+						<div class="item">Poesias</div>
+					</div>
+				</div>
+
+				<a href="./meus-livros.html" class="item active">
+					Minha lista
+				</a>
+
+				<a href="./meus-livros.html" class="item">Comprados</a>
+
+				<div class="item">
+					<div class="ui icon input">
+						<input class="secondary input text rounded" type="text" placeholder="Search...">
+						<i class="search link icon"></i>
+					</div>
+				</div>
+
+				<div class="ui right simple dropdown item">
+					Carlos Felipe
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						<a href="./configuracoes.html" class="item">Minha Conta</a>
+						<a href="./login.html" class="item">Sair</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--LISTA DE CATEGORIAS MOSTRADA NO MENU MOBILE-->
+		<div class="ui top fluid secondary menu mobile only tablet only" style="margin: 0;overflow-x: scroll">
+			<a class="item">Auto Ajuda</a>
+			<a class="item">Biografias</a>
+			<a class="item">Business</a>
+			<a class="item">Educação</a>
+			<a class="item">Fantasia</a>
+			<a class="item">Ficção Cientifica</a>
+			<a class="item">Infatil</a>
+			<div class="item">Investimentos</div>
+			<a class="item">Literatura</a>
+			<a class="item">História</a>
+			<a class="item">Humor</a>
+		</div>
+		<!--CONTAINER COM O CONTEUDO DO SITE-->
+		<div id="main" class="ui container ">
+
+			<div class="ui grid">
+				<div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+					<h1>Meus Livros</h1>
+				</div>
+				<!--OUTROS LIVROS DO AUTOR-->
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="seven wide mobile five wide tablet three wide computer column">
+					<div class="ui segment livros">
+						<div class="item bordered">
+							<div class="image">
+								<img src="./img/javaimg.jpg">
+							</div>
+							<div class="content">
+								<a class="header">Java rápido e fácil</a>
+								<div class="extra">
+									<div class="ui rating" data-max-rating="5"></div>
+								</div>
+								<div>
+									<p class="preco">R$ 30,00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/semantic.min.js"></script>
+
+	<script>
+		$sidebar = $('#sidebar').sidebar({
+			dimPage: false,
+			transition: 'push',
+			exclusive: false,
+		});
+		//.sidebar('toggle');
+
+		$('#open-menu').on('click', function () {
+			console.log('clicked');
+			$sidebar.sidebar('toggle');
+		})
+		$('.ui.accordion').accordion();
+
+		$('.browse.item')
+			.popup({
+				popup: '.fluid.popup'
+			});
+
+
+		$('.rating')
+			.rating('disable');
+
+	</script>
 </body>
+
 </html>

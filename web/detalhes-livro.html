@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,31 @@
 	<link rel="stylesheet" href="./styles/detalhes-livro.css">
 	<title>Document</title>
 </head>
+
 <body>
-   
+
 	<div id="sidebar" class="ui sidebar vertical fixed sticky menu">
 		<div class="ui styled" style="margin-top: 48px">
 			<a class="active item">Inicio</a>
 			<a class="item">Novidades</a>
 			<div class="item">Minha lista</div>
-			<div class="item">Comprados</div>  
+			<div class="item">Comprados</div>
 		</div>
 		<!--SIDEBAR MOBILE-->
 		<div class="ui styled accordion">
-			<div class="title"><span class="text-left">Carlos Felipe</span> <i class="dropdown icon text-right"></i></div>
+			<div class="title">
+				<span class="text-left">Carlos Felipe</span>
+				<i class="dropdown icon text-right"></i>
+			</div>
 			<div class="content">
 				<div class="item">Minha Conta</div>
 				<div class="item">Sair</div>
 			</div>
 		</div>
 	</div>
-            
-        
-  <!--CONTEUDO EMPURRADO AO ABRIR SIDEBAR MOBILE-->
+
+
+	<!--CONTEUDO EMPURRADO AO ABRIR SIDEBAR MOBILE-->
 	<div class="pusher">
 
 		<!--MENU MOBILE-->
@@ -46,59 +51,59 @@
 					</div>
 				</div>
 			</div>
-									
-			<!--MENU DESKTOP-->							
+
+			<!--MENU DESKTOP-->
 			<div class="ui secondary menu top medium mobile hidden tablet hidden">
-					
-					<a href="livros-sugeridos.html" class="item">
-						Inicio
-					</a>
 
-					<div class="ui simple dropdown item">
-						Categorias
-						<i class="dropdown icon"></i>
-						<div class="menu">
-							<div class="item">Auto ajuda</div>
-							<div class="item">Biografias</div>
-							<div class="item">Business</div>
-							<div class="item">Educação</div>
-							<div class="item">Fantasia</div>
-							<div class="item">Ficção Cientifica</div>
-							<div class="item">Física</div>
-							<div class="item">Infantil</div>
-							<div class="item">Investimentos</div>
-							<div class="item">Literatura</div>
-							<div class="item">História</div>
-							<div class="item">Humor</div>
-							<div class="item">Matematica</div>
-							<div class="item">Poesias</div>
-						</div>
+				<a href="livros-sugeridos.html" class="item">
+					Inicio
+				</a>
+
+				<div class="ui simple dropdown item">
+					Categorias
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						<div class="item">Auto ajuda</div>
+						<div class="item">Biografias</div>
+						<div class="item">Business</div>
+						<div class="item">Educação</div>
+						<div class="item">Fantasia</div>
+						<div class="item">Ficção Cientifica</div>
+						<div class="item">Física</div>
+						<div class="item">Infantil</div>
+						<div class="item">Investimentos</div>
+						<div class="item">Literatura</div>
+						<div class="item">História</div>
+						<div class="item">Humor</div>
+						<div class="item">Matematica</div>
+						<div class="item">Poesias</div>
 					</div>
+				</div>
 
-					<a href="meus-livros.html" class="item">
-						Minha lista
-					</a>
+				<a href="meus-livros.html" class="item">
+					Minha lista
+				</a>
 
-					<a href="meus-livros.html" class="item">Comprados</a>
-					
-					<div class="item">
-						<div class="ui icon input">
-							<input class="secondary input text rounded" type="text" placeholder="Search...">
-							<i class="search link icon"></i>
-						</div>
-					</div>      
-				
-					<div class="ui right simple dropdown item">
-						Carlos Felipe
-						<i class="dropdown icon"></i>
-						<div class="menu">
-							<a href="configuracoes.html" class="item">Minha Conta</a>
-							<a href="login.html" class="item">Sair</a>
-						</div>
-					</div>                    
+				<a href="meus-livros.html" class="item">Comprados</a>
+
+				<div class="item">
+					<div class="ui icon input">
+						<input class="secondary input text rounded" type="text" placeholder="Search...">
+						<i class="search link icon"></i>
+					</div>
+				</div>
+
+				<div class="ui right simple dropdown item">
+					Carlos Felipe
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						<a href="configuracoes.html" class="item">Minha Conta</a>
+						<a href="login.html" class="item">Sair</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		
+
 		<!--LISTA DE CATEGORIAS MOSTRADA NO MENU MOBILE-->
 		<div class="ui top fluid secondary menu mobile only tablet only" style="margin: 0;overflow-x: scroll">
 			<a class="item">Auto Ajuda</a>
@@ -113,12 +118,12 @@
 			<a class="item">História</a>
 			<a class="item">Humor</a>
 		</div>
-							
-											
-									
-		<!--CONTAINER COM O CONTEUDO DO SITE-->					
-		<div id="main" class="ui container ">	
-			<!--UI GRID-->		
+
+
+
+		<!--CONTAINER COM O CONTEUDO DO SITE-->
+		<div id="main" class="ui container ">
+			<!--UI GRID-->
 			<div class="ui grid">
 				<!--CONTAINER COM DETALHES DO LIVRO E COMENTÁRIOS-->
 				<div class="sixteen wide mobile sixteen wide tablet eleven wide computer column">
@@ -150,7 +155,7 @@
 								</div>
 								<div class="ui horizontal link list">
 									<p class="item">
-										Generos: 
+										Generos:
 									</p>
 									<a class="item">
 										<div class="ui tag label">Estudos</div>
@@ -161,34 +166,40 @@
 								<div>
 									<div class="ui rating" data-max-rating="5"></div>
 								</div>
-							
+
 								<div class="ui hidden divider"></div>
-						
+
 								<div class="ui horizontal list">
-										<div class="item">
-												<button class="medium ui secondary button">Ler mais tarde</button>
-										</div>
-										<div class="item">
-												<a href="./ler-livro.html" class="medium ui secondary button">Ler agora</a>
-										</div>		
+									<div class="item">
+										<a href="./meus-livros.html" class="medium ui secondary button">Ler mais tarde</a>
+									</div>
+									<div class="item">
+										<a href="./ler-livro.html" class="medium ui secondary button">Ler agora</a>
+									</div>
 								</div>
 
 							</div>
-						</div><!--FIM DETALHES LIVRO-->
+						</div>
+						<!--FIM DETALHES LIVRO-->
 
 						<!--DESCRIÇÃO LIVRO-->
 						<div class="ui grid">
-								<div class="sixteen wide">
-										<p>
-												The latest edition of Java in a Nutshell is designed to help experienced Java programmers get the most out of Java 7 and 8, but it’s also a learning path for new developers. Chock full of examples that demonstrate how to take complete advantage of modern Java APIs and development best practices, the first section of this thoroughly updated book provides a fast-paced, no-fluff introduction to the Java programming language and the core runtime aspects of the Java platform.
-												The second section is a reference to core concepts and APIs that shows you how to perform real programming work in the Java environment.
-										</p>
-								</div>
-						</div><!--FIM DESCRIÇÃO LIVROS-->
+							<div class="sixteen wide">
+								<p>
+									The latest edition of Java in a Nutshell is designed to help experienced Java programmers get the most out of Java 7 and
+									8, but it’s also a learning path for new developers. Chock full of examples that demonstrate how to take complete
+									advantage of modern Java APIs and development best practices, the first section of this thoroughly updated book
+									provides a fast-paced, no-fluff introduction to the Java programming language and the core runtime aspects of the
+									Java platform. The second section is a reference to core concepts and APIs that shows you how to perform real programming
+									work in the Java environment.
+								</p>
+							</div>
+						</div>
+						<!--FIM DESCRIÇÃO LIVROS-->
 
 						<!--INICIO GRID COMENTÁRIOS-->
 						<div class="ui grid">
-										
+
 							<div class="row">
 								<div class="left floated ten wide column">
 									<h2>Comentários</h2>
@@ -213,13 +224,13 @@
 												<a class="author">Stevie Feliciano</a>
 												<div class="metadata">
 													<div class="date">2 days ago</div>
-														<div class="rating">
-															<i class="star icon"></i>
-															5 Faves
-														</div>
+													<div class="rating">
+														<i class="star icon"></i>
+														5 Faves
+													</div>
 												</div>
 												<div class="text">
-														Hey guys, I hope this example comment is helping you read this documentation.
+													Hey guys, I hope this example comment is helping you read this documentation.
 												</div>
 											</div>
 										</div>
@@ -232,13 +243,13 @@
 												<a class="author">Stevie Feliciano</a>
 												<div class="metadata">
 													<div class="date">2 days ago</div>
-														<div class="rating">
-															<i class="star icon"></i>
-															5 Faves
-														</div>
+													<div class="rating">
+														<i class="star icon"></i>
+														5 Faves
+													</div>
 												</div>
 												<div class="text">
-														Hey guys, I hope this example comment is helping you read this documentation.
+													Hey guys, I hope this example comment is helping you read this documentation.
 												</div>
 											</div>
 										</div>
@@ -251,21 +262,25 @@
 												<a class="author">Stevie Feliciano</a>
 												<div class="metadata">
 													<div class="date">2 days ago</div>
-														<div class="rating">
-															<i class="star icon"></i>
-															5 Faves
-														</div>
+													<div class="rating">
+														<i class="star icon"></i>
+														5 Faves
+													</div>
 												</div>
 												<div class="text">
-														Hey guys, I hope this example comment is helping you read this documentation.
+													Hey guys, I hope this example comment is helping you read this documentation.
 												</div>
 											</div>
 										</div>
 
-									</div><!--FIM COMENTÁRIOS-->
-								</div><!--FIM COLUNA COMENTÁRIOS-->
-							</div><!--FIM ROW COMENTÁRIOS-->
-						</div><!--FIM GRID COMENTÁRIOS-->
+									</div>
+									<!--FIM COMENTÁRIOS-->
+								</div>
+								<!--FIM COLUNA COMENTÁRIOS-->
+							</div>
+							<!--FIM ROW COMENTÁRIOS-->
+						</div>
+						<!--FIM GRID COMENTÁRIOS-->
 					</div>
 				</div>
 
@@ -280,48 +295,53 @@
 							<div class="content">
 								<a class="header">Java rápido e fácil</a>
 								<div class="meta">
-									<span>The latest edition of Java in a Nutshell is designed to help experienced Java programmers get the most out of Java 7 and 8, but it’s also a learning path for new developers.</span>
+									<span>The latest edition of Java in a Nutshell is designed to help experienced Java programmers get the most out of Java
+										7 and 8, but it’s also a learning path for new developers.</span>
 								</div>
 								<div class="description">
 									<p></p>
 								</div>
 								<div class="extra">
-										<div class="ui rating" data-max-rating="5"></div>
+									<div class="ui rating" data-max-rating="5"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-		
-			</div><!--UI GRID-->
-				
-						
-		</div><!--CONTAINER COM O CONTEUDO DO SITE-->	
 
-		
-
-	</div><!--FIM PUSHER-->
-    
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/semantic.min.js"></script>
-    <script>
-        $sidebar = $('#sidebar').sidebar({
-            dimPage: false,
-            transition: 'push',
-            exclusive: false,
-        });
-        //.sidebar('toggle');
-
-        $('#open-menu').on('click',function(){
-            console.log('clicked');
-            $sidebar.sidebar('toggle');
-        })
-        $('.ui.accordion').accordion();
+			</div>
+			<!--UI GRID-->
 
 
-        $('.rating')
-        .rating('disable');
-  
-    </script>
+		</div>
+		<!--CONTAINER COM O CONTEUDO DO SITE-->
+
+
+
+	</div>
+	<!--FIM PUSHER-->
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/semantic.min.js"></script>
+	<script>
+		$sidebar = $('#sidebar').sidebar({
+			dimPage: false,
+			transition: 'push',
+			exclusive: false,
+		});
+		//.sidebar('toggle');
+
+		$('#open-menu').on('click', function () {
+			console.log('clicked');
+			$sidebar.sidebar('toggle');
+		})
+		$('.ui.accordion').accordion();
+
+
+		$('.rating')
+			.rating('disable');
+
+	</script>
 </body>
+
 </html>

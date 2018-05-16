@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,31 @@
     <link rel="stylesheet" href="./styles/semantic.min.css">
     <title>Head First Design Patterns</title>
 </head>
+
 <body>
     <div id="content" style="height: 99%;margin-left: auto; margin-right: auto; width: 100%">
         <div class="ui secondary menu top medium segment" style="margin: 0;">
-						
+
             <a href="./detalhes-livro.html" class="active item">
                 Voltar para o inicio
             </a>
             <p class="item">
                 Lendo livro > Head First Design Patterns
-            </p>                    
+            </p>
         </div>
-      
+
     </div>
     <script src="./js/jquery.min.js"></script>
     <script>
-        function isMobile() { 
-            if( navigator.userAgent.match(/Android/i)
-            || navigator.userAgent.match(/webOS/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
-            || navigator.userAgent.match(/iPod/i)
-            || navigator.userAgent.match(/BlackBerry/i)
-            || navigator.userAgent.match(/Windows Phone/i)
-            ){
+        function isMobile() {
+            if (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ) {
                 return true;
             }
             else {
@@ -38,12 +40,12 @@
             }
         }
 
-        function renderBookReader(isMobile){
+        function renderBookReader(isMobile) {
             var includeDiv = $("#include");
-            if(isMobile()){
+            if (isMobile()) {
                 window.history.length--;
                 window.location.href = "./pdfReader/web/viewer.html?file=/storage/livros/teste.pdf";
-            }else{
+            } else {
                 let iframe = document.createElement('iframe');
                 iframe.src = src = "./pdfReader/web/viewer.html?file=/storage/livros/teste.pdf";
                 iframe.style.width = "100%";
@@ -51,9 +53,10 @@
                 $("#content").append(iframe);
             }
         }
-        
+
         renderBookReader(isMobile);
     </script>
     <script src="./js/semantic.min.js"></script>
 </body>
+
 </html>
