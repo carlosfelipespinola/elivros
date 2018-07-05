@@ -1,1 +1,59 @@
-<h1>Aqui entra uma tabela de livros cadastrados com botões para cadastrar novos livros</h1>
+
+<%= render "/admin/partials/navbar" %>
+
+<div class="ui container">
+
+  <table class="ui compact celled definition table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Nome</th>
+        <th>PDF</th>
+        <th>Editora</th>
+        <th>Ultima atualização</th>
+        <th>Avaliação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="collapsing">
+          <div class="ui fitted slider checkbox">
+            <input type="checkbox"> <label></label>
+          </div>
+        </td>
+        <td>{{titulo}}</td>
+        <td>{{link pdf}}</td>
+        <td>{{editora}}</td>
+        <td>{{ultima atualização}}</td>
+        <td>
+          <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+        </td>
+      </tr>
+      
+    </tbody>
+    <tfoot class="full-width">
+      <tr>
+        <th></th>
+        <th colspan="5">
+          <div class="ui right floated small primary labeled icon button">
+            <i class="user icon"></i> Cadastrar livro
+          </div>
+          <div class="ui small button">
+            Deletar
+          </div>
+          <div class="ui small  disabled button">
+            Deletar Todos
+          </div>
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+
+</div>
+
+<% content_for :javascript do %>
+  <script>
+		$('.rating')
+			.rating('disable');
+  </script>
+<% end %>

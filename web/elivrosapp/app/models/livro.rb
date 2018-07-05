@@ -1,7 +1,8 @@
 class Livro
   include Mongoid::Document
   include Mongoid::Timestamps
-  
+  field :titulo, type: String
+  field :descricao, type: String
   field :url_pdf, type: String
   field :editora, type: String
   field :data_publicacao, type: Date  

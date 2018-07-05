@@ -2,36 +2,20 @@
 
   <div class="ui secondary menu top medium ">
 
-    <a href="./livros-sugeridos.html" class=" item">
+    <a href="/dashboard" class=" item">
       Inicio
     </a>
 
     <div class="ui simple dropdown item">
-      Categorias
-      <i class="dropdown icon"></i>
+      Categorias<i class="dropdown icon"></i>
       <div class="menu">
-        <div class="item">Auto ajuda</div>
-        <div class="item">Biografias</div>
-        <div class="item">Business</div>
-        <div class="item">Educação</div>
-        <div class="item">Fantasia</div>
-        <div class="item">Ficção Cientifica</div>
-        <div class="item">Física</div>
-        <div class="item">Infantil</div>
-        <div class="item">Investimentos</div>
-        <div class="item">Literatura</div>
-        <div class="item">História</div>
-        <div class="item">Humor</div>
-        <div class="item">Matematica</div>
-        <div class="item">Poesias</div>
+        <%= render 'usuario/partials/categorias_livros' %>
       </div>
     </div>
 
-    <a href="./meus-livros.html" class="item active">
+    <a href="/dashboard/livros/minha-lista" class="item active">
       Minha lista
     </a>
-
-    <a href="./meus-livros.html" class="item">Comprados</a>
 
     <div class="item">
       <div class="ui icon input">
@@ -44,8 +28,8 @@
       Carlos Felipe
       <i class="dropdown icon"></i>
       <div class="menu">
-        <a href="./configuracoes.html" class="item">Minha Conta</a>
-        <a href="./login.html" class="item">Sair</a>
+        <a href="/dashboard/minha-conta" class="item">Minha Conta</a>
+        <a href="/" class="item">Sair</a>
       </div>
     </div>
   </div>

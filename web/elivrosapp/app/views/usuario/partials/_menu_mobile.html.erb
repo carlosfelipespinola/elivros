@@ -1,0 +1,52 @@
+
+<!--SIDEBAR-->
+<div id="sidebar" class="ui sidebar vertical fixed sticky menu">
+
+  <div class="ui styled" style="margin-top: 48px">
+    <a class="active item" href="/dashboard">Inicio</a>
+    <a class="item" href="/dashboard/livros/minha-lista">Minha lista</a>
+  </div>
+
+  <div class="ui styled accordion">
+    <div class="title">
+      <span class="text-left">Carlos Felipe</span>
+      <i class="dropdown icon text-right"></i>
+    </div>
+    <div class="content">
+      <a class="item" href="/dashboard/minha-conta">Minha Conta</a>
+      <a class="item" href="/">Sair</a>
+    </div>
+  </div>
+
+</div>
+
+<!--NAVBAR-->
+<div class="pusher" style="min-height: 0;">
+  <div class="mobile only tablet only">
+    <%= render "usuario/partials/navbar_mobile" %>
+  </div>
+</div>
+
+
+<% content_for :javascript do %>
+  <script>
+    $sidebar = $('#sidebar').sidebar({
+			dimPage: false,
+			transition: 'push',
+			exclusive: false,
+		});
+		//.sidebar('toggle');
+
+		$('#open-menu').on('click', function () {
+			console.log('clicked');
+			$sidebar.sidebar('toggle');
+		})
+		$('.ui.accordion').accordion();
+
+		$('.browse.item')
+		.popup({
+			popup: '.fluid.popup'
+		});
+
+  </script>
+<% end %>

@@ -1,0 +1,8 @@
+<% 
+  if ! defined? @categorias_livro 
+    raise NameError, "Onde houver partial com navbar do usuário ou partial de categorias é obrigatório a presenta de um array de categorias como @categorias_livros" 
+  end
+%>
+<% @categorias_livro.each do | categoria | %>
+  <a class="item" href="livros/categorias/<%= categoria %>"><%= categoria.sub('-',' ').capitalize %></a>
+<% end %>

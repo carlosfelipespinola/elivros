@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   namespace :admin do
     #este é o modulo do administrador
     #todas as rotas aqui começaram com /admin
-    #root to: redirect('/admin/livros')
-    #get :livros, to: 'livros#index'
+    root to: redirect('/admin/livros')
+    get :livros, to: 'livros#index'
   end
 
   namespace :usuario, path: 'dashboard' do
