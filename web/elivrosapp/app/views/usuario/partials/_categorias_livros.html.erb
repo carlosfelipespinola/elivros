@@ -4,5 +4,5 @@
   end
 %>
 <% @categorias_livro.each do | categoria | %>
-  <a class="item" href="livros/categorias/<%= categoria %>"><%= categoria.sub('-',' ').capitalize %></a>
+  <a class="item" href="/dashboard/livros/categorias/<%= categoria %>"><%= categoria.sub('-',' ').capitalize %></a>
 <% end %>
