@@ -6,5 +6,5 @@ class Livro
   field :data_publicacao, type: Date  
   embeds_many :autors
   embeds_many :generos
-  has_and_belongs_to_many :usuarios
+  #has_and_belongs_to_many :usuarios
 end

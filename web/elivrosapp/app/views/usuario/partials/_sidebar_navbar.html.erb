@@ -1,0 +1,37 @@
+<%= render "usuario/partials/sidebar" %>
+
+<div class="mobile hidden tablet hidden">
+  <div class="push">
+    <%= render "usuario/partials/navbar" %>
+  </div>
+</div>
+
+<div class="mobile only tablet only">
+  <%= render "usuario/partials/navbar_mobile" %>
+</div>
+
+<% content_for :javascript do %>
+  <script>
+    $sidebar = $('#sidebar').sidebar({
+			dimPage: false,
+			transition: 'push',
+			exclusive: false,
+		});
+		//.sidebar('toggle');
+
+		$('#open-menu').on('click', function () {
+			console.log('clicked');
+			$sidebar.sidebar('toggle');
+		})
+		$('.ui.accordion').accordion();
+
+		$('.browse.item')
+			.popup({
+				popup: '.fluid.popup'
+			});
+
+
+		$('.rating')
+			.rating('disable');
+  </script>
+<% end %>

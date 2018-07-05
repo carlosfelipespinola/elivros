@@ -1,92 +1,35 @@
-<%= render "usuario/partials/navbar" %>
-<div id="main" class="ui container ">
+<%= render "usuario/partials/sidebar_navbar" %>
 
-  <div class="ui grid">
-    <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
-      <h1>Recomendado para você</h1>
+<div class="pusher">
+  <div id="main" class="ui container ">
+
+    <div class="ui grid">
+      <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+        <h1>Recomendado para você</h1>
+      </div>
+      <% for i in 1..10 do %>
+      <!--<a href="detalhes-livro.html">-->
+        <div class="seven wide mobile five wide tablet three wide computer column">
+          <div class="ui segment livros">
+            <div class="item bordered">
+              <div class="image">
+                <img src="./img/javaimg.jpg">
+              </div>
+              <div class="content">
+                <a class="header">Java rápido e fácil</a>
+                <div class="extra">
+                  <div class="ui rating" data-max-rating="5"></div>
+                </div>
+                <div>
+                  <p class="preco">R$ 30,00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--</a>-->
+      <% end %>
+
     </div>
-    <a href="detalhes-livro.html">
-      <div class="seven wide mobile five wide tablet three wide computer column">
-        <div class="ui segment livros">
-          <div class="item bordered">
-            <div class="image">
-              <img src="./img/javaimg.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Java rápido e fácil</a>
-              <div class="extra">
-                <div class="ui rating" data-max-rating="5"></div>
-              </div>
-              <div>
-                <p class="preco">R$ 30,00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a href="detalhes-livro.html">
-      <div class="seven wide mobile five wide tablet three wide computer column">
-        <div class="ui segment livros">
-          <div class="item bordered">
-            <div class="image">
-              <img src="./img/javaimg.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Java rápido e fácil</a>
-              <div class="extra">
-                <div class="ui rating" data-max-rating="5"></div>
-              </div>
-              <div>
-                <p class="preco">R$ 30,00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a href="detalhes-livro.html">
-      <div class="seven wide mobile five wide tablet three wide computer column">
-        <div class="ui segment livros">
-          <div class="item bordered">
-            <div class="image">
-              <img src="./img/javaimg.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Java rápido e fácil</a>
-              <div class="extra">
-                <div class="ui rating" data-max-rating="5"></div>
-              </div>
-              <div>
-                <p class="preco">R$ 30,00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a href="detalhes-livro.html">
-      <div class="seven wide mobile five wide tablet three wide computer column">
-        <div class="ui segment livros">
-          <div class="item bordered">
-            <div class="image">
-              <img src="./img/javaimg.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Java rápido e fácil</a>
-              <div class="extra">
-                <div class="ui rating" data-max-rating="5"></div>
-              </div>
-              <div>
-                <p class="preco">R$ 30,00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-
-
-
   </div>
 </div>
