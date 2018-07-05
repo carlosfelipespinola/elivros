@@ -1,68 +1,104 @@
-<form>
-  <div id="formulario-modal-cadastro-livros" class="ui modal">
-    <i class="close icon"></i>
-    <div class="header">
-      Cadastrar novo livro
+
+<%= form_tag({controller: "livros", action: "create"}, multipart: true, method: "post", class: "ui modal", id: "formulario-modal-cadastro-livros") do %>
+
+  <i class="close icon"></i>
+  <div class="header">
+    Cadastrar novo livro
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+      <label for="input-imagem-capa" class="ui button">
+        Adicionar imagem
+      </label>
+      <%= file_field_tag 'imagem_capa', style: "display: none", accept: "image/*", id: "input-imagem-capa" %>
+      <img id="img-placeholder" src="" style="margin-top: 5px">
+
     </div>
-    <div class="image content">
-      <div class="ui medium image">
-        <label for="input-imagem-capa" class="ui button">
-          Adicionar imagem
-        </label>
-        <input style="display: none;" type="file" name="imagem_capa" id="input-imagem-capa">
-        <img id="img-placeholder" src="">
-      </div>
-      <div class="description" style="width: 100%;">
-        <div class="ui form">
-          <div class="fields">
-            <div class="field">
-              <label>Titulo</label>
-              <input type="text">
-            </div>
+    <div class="description" style="width: 100%;">
 
-            <div class="field">
-              <label>Editora</label>
-              <input name="editora" type="text">
-            </div>
+      <div class="ui form">
 
-            
-            <div class="field">
-              <label>Data publicação</label>
-              <input name="data_publicacao" type="date">
-            </div>
+        <div class="fields">
+          <div class="field">
+            <label>Titulo</label>
+            <input name="titulo" type="text">
           </div>
-
-          <div class="ui form">
-            <div class="field">
-              <label>Country</label>
-              <select multiple="" class="ui dropdown" name="categorias[]">
-                <% @categorias.each do |categoria| %>
-                  <option value="<%= categoria %>"> <%= categoria.sub("-"," ").capitalize %> </option>
-                <% end %>
-              </select>
-            </div>
-          </div>
-          
 
           <div class="field">
-            <label>Descrição</label>
-            <textarea name="descricao" ></textarea>
+            <label>Editora</label>
+            <input name="editora" type="text">
           </div>
 
           
-
-
+          <div class="field">
+            <label>Data publicação</label>
+            <input name="data_publicacao" type="date">
+          </div>
         </div>
+
+        <div class="field">
+          <label>Categorias</label>
+          <select multiple="" class="ui dropdown" name="generos[]">
+            <% @categorias.each do |categoria| %>
+              <option value="<%= categoria %>"> <%= categoria.sub("-"," ").capitalize %> </option>
+            <% end %>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>PDF</label>
+          <%= file_field_tag 'pdf', accept: "application/pdf"%>
+        </div>
+
+        <div class="field">
+          <label>Descrição</label>
+          <textarea name="descricao" ></textarea>
+        </div>
+
       </div>
-    </div>
-    <div class="actions">
-      <div class="ui black deny button">
-        Cancelar
-      </div>
-      <button class="ui positive right labeled icon button">
-        Finalizar cadastro
-        <i class="checkmark icon"></i>
-      </button>
+
+      
+
+
+        
+
     </div>
   </div>
-</form>
+  <div class="actions">
+    <div class="ui black deny button">
+      Cancelar
+    </div>
+    <button type="submit" class="ui right labeled icon button">
+      Finalizar cadastro
+      <i class="checkmark icon"></i>
+    </button>
+  </div>
+  
+
+<% end %>
+
+
+<% content_for :javascript do %>
+  <script>
+    (function(){
+
+      function lerImagem(event){
+        let fileList = event.target.files;
+        let reader = new FileReader();
+        reader.onload = (ev) => {
+          render(ev.target['result'])
+        }
+        reader.readAsDataURL(fileList[0]);
+      }
+
+      function render(img){
+        $("#img-placeholder").attr('src',img);
+      }
+
+      $("#input-imagem-capa").on('change',lerImagem);
+
+    })($)
+    let imagens = []
+    
+  </script>
+<% end %>

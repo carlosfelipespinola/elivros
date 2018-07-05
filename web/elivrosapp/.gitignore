@@ -21,3 +21,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/public/uploads/imagens/*
+/public/uploads/livros/*
+
+!/public/uploads/imagens/.gitkeep
+!/public/uploads/livros/.gitkeep

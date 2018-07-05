@@ -2,7 +2,9 @@
 <%= render "/admin/partials/navbar" %>
 
 <div class="ui container">
-
+  <% if @p %>
+  <%= @p.inspect %>
+  <%end%>
   <table class="ui compact celled definition table">
     <thead>
       <tr>
