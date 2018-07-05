@@ -1,0 +1,68 @@
+<form>
+  <div id="formulario-modal-cadastro-livros" class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Cadastrar novo livro
+    </div>
+    <div class="image content">
+      <div class="ui medium image">
+        <label for="input-imagem-capa" class="ui button">
+          Adicionar imagem
+        </label>
+        <input style="display: none;" type="file" name="imagem_capa" id="input-imagem-capa">
+        <img id="img-placeholder" src="">
+      </div>
+      <div class="description" style="width: 100%;">
+        <div class="ui form">
+          <div class="fields">
+            <div class="field">
+              <label>Titulo</label>
+              <input type="text">
+            </div>
+
+            <div class="field">
+              <label>Editora</label>
+              <input name="editora" type="text">
+            </div>
+
+            
+            <div class="field">
+              <label>Data publicação</label>
+              <input name="data_publicacao" type="date">
+            </div>
+          </div>
+
+          <div class="ui form">
+            <div class="field">
+              <label>Country</label>
+              <select multiple="" class="ui dropdown" name="categorias[]">
+                <% @categorias.each do |categoria| %>
+                  <option value="<%= categoria %>"> <%= categoria.sub("-"," ").capitalize %> </option>
+                <% end %>
+              </select>
+            </div>
+          </div>
+          
+
+          <div class="field">
+            <label>Descrição</label>
+            <textarea name="descricao" ></textarea>
+          </div>
+
+          
+
+
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Cancelar
+      </div>
+      <button class="ui positive right labeled icon button">
+        Finalizar cadastro
+        <i class="checkmark icon"></i>
+      </button>
+    </div>
+  </div>
+</form>

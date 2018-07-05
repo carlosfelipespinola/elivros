@@ -35,9 +35,9 @@
       <tr>
         <th></th>
         <th colspan="5">
-          <div class="ui right floated small primary labeled icon button">
+          <button id="btn-cadastrar-livro" class="ui right floated small primary labeled icon button">
             <i class="user icon"></i> Cadastrar livro
-          </div>
+          </button>
           <div class="ui small button">
             Deletar
           </div>
@@ -51,9 +51,16 @@
 
 </div>
 
+<%= render "form_modal"%>
+
 <% content_for :javascript do %>
   <script>
-		$('.rating')
-			.rating('disable');
+
+		$('.rating').rating('disable');
+ 
+    $("#btn-cadastrar-livro").on('click',function(e){
+      $('#formulario-modal-cadastro-livros.ui.modal').modal('show');
+    });
+  
   </script>
 <% end %>
