@@ -11,14 +11,29 @@
   </head>
 
   <body>
+  <!--Flash messages exibidas no top da pagina-->
+  <% flash.each do |name, msg| %>
+    <div class="ui <%= name %> message top">
+      <i class="close icon"></i>
+      <%= msg %>
+    </div>
+  <% end %>
     <%= yield %>
   </body>
   <script>
     (function(){
       $('.ui.dropdown').dropdown();
+      
+      $('.message .close')
+      .on('click', function() {
+        $(this)
+          .closest('.message')
+          .transition('fade');
+      });
+
     })($);
   </script>
   <%= yield :javascript %>
 
-
+  
 </html>

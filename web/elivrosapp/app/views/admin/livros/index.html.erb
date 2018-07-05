@@ -2,9 +2,7 @@
 <%= render "/admin/partials/navbar" %>
 
 <div class="ui container">
-  <% if @p %>
-  <%= @p.inspect %>
-  <%end%>
+
   <table class="ui compact celled definition table">
     <thead>
       <tr>
@@ -17,20 +15,29 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="collapsing">
-          <div class="ui fitted slider checkbox">
-            <input type="checkbox"> <label></label>
-          </div>
-        </td>
-        <td>{{titulo}}</td>
-        <td>{{link pdf}}</td>
-        <td>{{editora}}</td>
-        <td>{{ultima atualização}}</td>
-        <td>
-          <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-        </td>
-      </tr>
+      <% if @livros.length == 0 %>
+        <tr>
+          <td></td>
+          <td colspan="5"><div class="ui yellow message">Nenhum livro cadastrado</div></td>
+        </tr>
+      <% else %>
+        <% @livros.each do | livro | %>
+          <tr>
+            <td class="collapsing">
+              <div class="ui fitted slider checkbox">
+                <input type="checkbox"> <label></label>
+              </div>
+            </td>
+            <td><%= livro.titulo %></td>
+            <td><a href="<%= livro.url_pdf %>" target="_blank" >clique para visualizar</a></td>
+            <td><%= livro.editora %></td>
+            <td><%= livro.updated_at %></td>
+            <td>
+              <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
       
     </tbody>
     <tfoot class="full-width">

@@ -10,7 +10,7 @@
       <label for="input-imagem-capa" class="ui button">
         Adicionar imagem
       </label>
-      <%= file_field_tag 'imagem_capa', style: "display: none", accept: "image/*", id: "input-imagem-capa" %>
+      <%= file_field_tag 'imagem_capa', style: "display: none", accept: "image/*", id: "input-imagem-capa", :required => true %>
       <img id="img-placeholder" src="" style="margin-top: 5px">
 
     </div>
@@ -21,24 +21,24 @@
         <div class="fields">
           <div class="field">
             <label>Titulo</label>
-            <input name="titulo" type="text">
+            <input name="titulo" type="text" required>
           </div>
 
           <div class="field">
             <label>Editora</label>
-            <input name="editora" type="text">
+            <input name="editora" type="text" required>
           </div>
 
           
           <div class="field">
             <label>Data publicação</label>
-            <input name="data_publicacao" type="date">
+            <input name="data_publicacao" type="date" required>
           </div>
         </div>
 
         <div class="field">
           <label>Categorias</label>
-          <select multiple="" class="ui dropdown" name="generos[]">
+          <select multiple="" class="ui dropdown" name="generos[]" required>
             <% @categorias.each do |categoria| %>
               <option value="<%= categoria %>"> <%= categoria.sub("-"," ").capitalize %> </option>
             <% end %>
@@ -47,12 +47,12 @@
 
         <div class="field">
           <label>PDF</label>
-          <%= file_field_tag 'pdf', accept: "application/pdf"%>
+          <%= file_field_tag 'pdf', accept: "application/pdf", :required => true %>
         </div>
 
         <div class="field">
           <label>Descrição</label>
-          <textarea name="descricao" ></textarea>
+          <textarea name="descricao" required ></textarea>
         </div>
 
       </div>

@@ -264,3 +264,20 @@ body, body.pushable, body.pushable>.pusher{
 .text.center{
   text-align: center!important;
 }
+
+
+.ui.message.top{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0px;
+  border-radius: 0;
+  padding: 28px;
+  z-index: 100;
+  height: 72px;
+  text-align: center;
+}
+
+.ui[class*="top attached"].menu {
+  margin-top: 0;
+}
