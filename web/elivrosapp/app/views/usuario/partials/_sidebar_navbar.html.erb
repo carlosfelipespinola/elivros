@@ -1,13 +1,16 @@
 <%= render "usuario/partials/sidebar" %>
 
+
 <div class="mobile hidden tablet hidden">
-  <div class="push">
+ 
     <%= render "usuario/partials/navbar" %>
-  </div>
+
 </div>
 
-<div class="mobile only tablet only">
-  <%= render "usuario/partials/navbar_mobile" %>
+<div class="pusher" style="min-height: 95px;">
+  <div class="mobile only tablet only">
+    <%= render "usuario/partials/navbar_mobile" %>
+  </div>
 </div>
 
 <% content_for :javascript do %>
