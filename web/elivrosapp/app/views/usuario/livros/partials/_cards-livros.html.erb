@@ -3,15 +3,15 @@
 <div class="ui segment livros">
   <div class="item bordered">
     <div class="image">
-      <img src="./img/javaimg.jpg">
+      <img class="ui fluid image" src="/public<%= livro.url_capa %>">
     </div>
     <div class="content">
-      <a class="header">Java rápido e fácil</a>
+      <a class="header" href="/dashboard/livros/<%= livro._id %>"><%= livro.titulo %></a>
       <div class="extra">
         <div class="ui rating" data-max-rating="5"></div>
       </div>
       <div>
-        <p class="preco">R$ 30,00</p>
+        <p class="preco"></p>
       </div>
     </div>
   </div>
