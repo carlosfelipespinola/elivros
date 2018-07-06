@@ -18,10 +18,12 @@
     </a>
 
     <div class="item">
+      <%= form_tag({controller: "livros", action: "buscar"}, method: "get") do %>
       <div class="ui icon input">
-        <input class="secondary input text rounded" type="text" placeholder="Search...">
+        <input class="secondary input text rounded" type="text" name="busca" placeholder="Search...">
         <i class="search link icon"></i>
       </div>
+      <% end %>
     </div>
 
     <div class="ui right simple dropdown item">

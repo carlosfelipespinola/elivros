@@ -8,29 +8,11 @@
         <h1>Recomendado para você</h1>
       </div>
 
-      <% for i in 1..10 do %>
-      <!--<a href="detalhes-livro.html">-->
-        <div class="seven wide mobile five wide tablet three wide computer column">
-          <div class="ui segment livros">
-            <div class="item bordered">
-              <div class="image">
-                <img src="./img/javaimg.jpg">
-              </div>
-              <div class="content">
-                <a class="header">Java rápido e fácil</a>
-                <div class="extra">
-                  <div class="ui rating" data-max-rating="5"></div>
-                </div>
-                <div>
-                  <p class="preco">R$ 30,00</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <!--</a>-->
-      <% end %>
-
+      <div class="seven wide mobile five wide tablet three wide computer column">
+        <!--LISTA DE LIVROS-->
+        <%= render partial: "usuario/livros/partials/cards-livros", locals: {livros: @livros} %>
+      </div>
+    
     </div>
   </div>
 </div>

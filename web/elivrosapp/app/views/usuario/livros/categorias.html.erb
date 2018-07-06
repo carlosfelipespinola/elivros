@@ -1,3 +1,15 @@
 <%= render "usuario/partials/menus" %>
-<h1>Essa é a pagina a ser renderizada quando o usuário fizer uma busca por categoria</h1>
-<%= @categoria_buscada.inspect %>
+
+
+<div id="main" class="ui container">
+
+  <div class="ui grid">
+    <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+      <h1>Livros na categoria <%= @categoria_buscada.sub("-"," ").downcase %></h1>
+    </div>
+    <!--OUTROS LIVROS DO AUTOR-->
+    <div class="seven wide mobile five wide tablet three wide computer column">
+      <%= render partial: "usuario/livros/partials/cards-livros", locals: {livros: @livros} %>
+    </div>
+  </div>
+</div>

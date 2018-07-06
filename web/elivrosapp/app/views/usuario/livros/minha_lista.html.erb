@@ -1,2 +1,18 @@
 <%= render "usuario/partials/menus" %>
-<h1>Aqui deve ser renderizado os livros na lista de ler mais tarde do usuario</h1>
+
+<div class="pusher">
+  <div id="main" class="ui container ">
+
+    <div class="ui grid">
+      <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+        <h1>Minha lista</h1>
+      </div>
+
+      <div class="seven wide mobile five wide tablet three wide computer column">
+        <!--LISTA DE LIVROS-->
+        <%= render partial: "usuario/livros/partials/cards-livros", locals: {livros: @livros} %>
+      </div>
+    
+    </div>
+  </div>
+</div>

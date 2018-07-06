@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     #todas as rotas aqui dentro começaram com /dashboard
     root to: 'livros#index'
     get 'livros/minha-lista', to: "livros#minha_lista"
-    get 'livros/buscar/:query', to: "livros#buscar"
+    get 'livros/buscar', to: "livros#buscar"
     get 'livros/categorias/:categoria', to: "livros#categorias"
     get 'minha-conta/', to: "minha_conta#index"
   end

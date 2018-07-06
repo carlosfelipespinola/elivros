@@ -1,3 +1,18 @@
 <%= render "usuario/partials/menus" %>
-<h1>Aqui é a pagina a ser exibida na busca de livro pela searchbox</h1>
-<%= @busca %>
+
+<div class="pusher">
+  <div id="main" class="ui container ">
+
+    <div class="ui grid">
+      <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+        <h1>Pesquisando por: <%= @busca %></h1>
+      </div>
+
+      <div class="seven wide mobile five wide tablet three wide computer column">
+        <!--LISTA DE LIVROS-->
+        <%= render partial: "usuario/livros/partials/cards-livros", locals: {livros: @livros} %>
+      </div>
+    
+    </div>
+  </div>
+</div>
