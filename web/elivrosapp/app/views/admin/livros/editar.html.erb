@@ -1,0 +1,28 @@
+<%= render "/admin/partials/navbar" %>
+
+<div class="ui container">
+  <div class="row">
+    <div class="column">
+      <div class="ui huge breadcrumb">
+        <a class="section" href="/admin/livros">Admin</a>
+        <i class="right chevron icon divider"></i>
+        <a class="section" href="/admin/livros">Livros</a>
+        <i class="right chevron icon divider"></i>
+        <div class="active section">
+          Editar
+          <i class="right arrow icon divider"></i>
+          <%= @livro[:titulo] %>
+        </div>
+      </div>
+    </div>
+  </div>
+<div>
+
+<div class="ui container" style="margin-top: 10px; margin-bottom: 10px;">
+  <div class="ui segment">
+    <%= form_tag({controller: "livros", action: "update"}, multipart: true, method: "put", class: "ui form") do |f| %>
+      <%= render partial: '/admin/livros/inputs', locals: {livro: @livro} %>
+      <button class="ui fluid primary button ">Salvar alterações</button>
+    <% end %>
+  </div>
+</div>

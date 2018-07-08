@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     root to: redirect('/admin/livros')
     get :livros, to: 'livros#index'
     post :livros, to: 'livros#create'
+    get 'livros/:id', to: 'livros#editar'
+    put 'livros/:id', to: 'livros#update'
   end
 
   namespace :usuario, path: 'dashboard' do

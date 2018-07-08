@@ -28,7 +28,7 @@
                 <input type="checkbox"> <label></label>
               </div>
             </td>
-            <td><%= livro.titulo %></td>
+            <td><a href="/admin/livros/<%= livro[:_id] %>"><%= livro.titulo %></a></td>
             <td><a href="/public<%= livro.url_pdf %>" target="_blank" >clique para visualizar</a></td>
             <td><%= livro.editora %></td>
             <td><%= livro.updated_at %></td>
@@ -45,7 +45,7 @@
         <th></th>
         <th colspan="5">
           <button id="btn-cadastrar-livro" class="ui right floated small primary labeled icon button">
-            <i class="user icon"></i> Cadastrar livro
+            <i class="book icon"></i> Cadastrar livro
           </button>
           <div class="ui small button">
             Deletar

@@ -42,4 +42,12 @@ class Admin::LivrosController < ApplicationController
 
     redirect_to action: "index"
   end
+
+  def editar
+    @categorias = Genero.generos
+    @livro = Livro.all[0]
+  end
+
+  def update
+  end
 end
