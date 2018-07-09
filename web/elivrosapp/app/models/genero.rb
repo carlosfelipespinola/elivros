@@ -7,6 +7,6 @@ class Genero
 
   #metodos staticos
   def self.generos
-    ['auto-ajuda','biografias','business']
+    ['auto-ajuda','biografias','business',"computador","desenvolvimento-de-software", "economia"]
   end
 end

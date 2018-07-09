@@ -55,11 +55,11 @@
     PDF:
     <% if livro %>
       <% if livro[:url_pdf] %>
-        <a href="<%= livro[:url_pdf] %>">Clique para ver o pdf cadastrado</a>
+        <a href="/public<%= livro[:url_pdf] %>">Clique para ver o pdf cadastrado</a>
       <% end %>
     <% end %>
   </label>
-  <%= file_field_tag :pdf, style: "padding: 7px", required: !(defined? livro and livro != nil)   %>
+  <%= file_field_tag :pdf, style: "padding: 7px", accept: "application/pdf", required: !(defined? livro and livro != nil)   %>
 </div>
 
 </div>
@@ -90,7 +90,5 @@
       $("#input-imagem-capa").on('change',lerImagem);
 
     })($)
-    let imagens = []
-    
   </script>
 <% end %>
