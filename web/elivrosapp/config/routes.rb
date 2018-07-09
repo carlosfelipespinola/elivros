@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     get 'livros', to: "livros#buscar"
     get 'livros/categorias/:categoria', to: "livros#categorias"
     get 'livros/:id', to: "livros#detalhes"
+    get 'livros/:id/ler', to: "livros#ler_livro"
     get 'minha-conta/', to: "minha_conta#index"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Head First Design Patterns</title>
+</head>
+
+<body>
+  <div style="height: 8vh; padding: 12px;">
+
+      <div class="row">
+        <div class="column">
+          <div class="ui huge breadcrumb">
+            <a class="section" href="/dashboard/livros">Livros</a>
+            <i class="right chevron icon divider"></i>
+            <a class="section" href="/dashboard/livros/<%= @livro[:_id] %>"><%= @livro[:titulo] %></a>
+            <i class="right chevron icon divider"></i>
+            <div class="active section">
+              Ler livro
+            </div>
+          </div>
+        </div>
+      </div>
+   
+  </div>
+  
+  <object data="/public<%= @livro[:url_pdf] %>" type="application/pdf" style="width: 100%; height: 89vh">
+  </object>
+  
+ 
+</body>
+
+</html>

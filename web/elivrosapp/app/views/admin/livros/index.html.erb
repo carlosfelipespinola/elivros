@@ -1,7 +1,22 @@
 
 <%= render "/admin/partials/navbar" %>
 
+
 <div class="ui container">
+  <div class="row">
+    <div class="column">
+      <div class="ui huge breadcrumb">
+        <a class="section" href="/admin/livros">Painel de administração</a>
+        <i class="right chevron icon divider"></i>
+        <div class="active section">
+          Livros
+        </div>
+      </div>
+    </div>
+  </div>
+<div>
+
+<div class="ui container" style="margin-top: 10px; margin-bottom: 10px;">
 
   <table class="ui compact celled definition table">
     <thead>
@@ -33,7 +48,8 @@
             <td><%= livro.editora %></td>
             <td><%= livro.updated_at %></td>
             <td>
-              <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+              <!--<div class="ui star rating" data-rating="3" data-max-rating="3"></div>-->
+              -
             </td>
           </tr>
         <% end %>

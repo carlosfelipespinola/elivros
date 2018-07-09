@@ -11,35 +11,35 @@
         <div class="ui grid">
 
           <div class="sixteen wide mobile six wide tablet six wide computer column">
-            <img class="ui image capa livro grande" src="./img/headfirst.jpg">
+            <img class="ui image capa livro grande" src="/public<%= @livro[:url_capa] %>">
           </div>
 
           <div class="sixteen wide mobile ten wide tablet ten wide computer column">
-            <h1>Head First Design Patterns: A Brain-Friendly Guide</h1>
+            <h1><%= @livro[:titulo]  %></h1>
             <div class="ui horizontal link list">
               <p class="item">
                 Autor: Benjamin J EvansDavid Flanagan
               </p>
               <a class="item">
-                Paginas: 200
+                Paginas: <%= @paginas %>
               </a>
             </div>
             <div class="ui horizontal link list">
               <p class="item">
-                Editora: O'Reilly Media, Inc
+                Editora: <%= @livro[:editora] %>
               </p>
               <a class="item">
-                Data publicação: 11/05/2018
+                Data publicação: <%= @livro[:data_publicacao].strftime("%m/%d/%Y") %>
               </a>
             </div>
             <div class="ui horizontal link list">
               <p class="item">
-                Generos:
+                Categorias:
               </p>
               <a class="item">
-                <div class="ui tag label">Estudos</div>
-                <div class="ui tag label">Programação</div>
-                <div class="ui tag label">Java</div>
+                <% @livro[:generos].each do | genero |%>
+                  <div class="ui tag label"><%= genero[:nome] %></div>
+                <% end %>
               </a>
             </div>
             <div>
@@ -50,10 +50,12 @@
 
             <div class="ui horizontal list">
               <div class="item">
-                <a href="./meus-livros.html" class="medium ui secondary button">Ler mais tarde</a>
+                <a href="#" class="ui medio secondary button">Ler mais tarde</a>
               </div>
               <div class="item">
-                <a href="./ler-livro.html" class="medium ui secondary button">Ler agora</a>
+                <a href="/dashboard/livros/<%= @livro[:_id] %>/ler"
+                   class="ui medio secondary button"
+                >Ler agora</a>
               </div>
             </div>
 
@@ -65,12 +67,7 @@
         <div class="ui grid">
           <div class="sixteen wide">
             <p>
-              The latest edition of Java in a Nutshell is designed to help experienced Java programmers get the most out of Java 7 and
-              8, but it’s also a learning path for new developers. Chock full of examples that demonstrate how to take complete
-              advantage of modern Java APIs and development best practices, the first section of this thoroughly updated book
-              provides a fast-paced, no-fluff introduction to the Java programming language and the core runtime aspects of the
-              Java platform. The second section is a reference to core concepts and APIs that shows you how to perform real programming
-              work in the Java environment.
+              <%= @livro[:descricao] %>
             </p>
           </div>
         </div>
@@ -114,43 +111,7 @@
                   </div>
                 </div>
 
-                <div class="comment">
-                  <a class="avatar">
-                    <img src="./img/elliot.jpg">
-                  </a>
-                  <div class="content">
-                    <a class="author">Stevie Feliciano</a>
-                    <div class="metadata">
-                      <div class="date">2 days ago</div>
-                      <div class="rating">
-                        <i class="star icon"></i>
-                        5 Faves
-                      </div>
-                    </div>
-                    <div class="text">
-                      Hey guys, I hope this example comment is helping you read this documentation.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="comment">
-                  <a class="avatar">
-                    <img src="./img/elliot.jpg">
-                  </a>
-                  <div class="content">
-                    <a class="author">Stevie Feliciano</a>
-                    <div class="metadata">
-                      <div class="date">2 days ago</div>
-                      <div class="rating">
-                        <i class="star icon"></i>
-                        5 Faves
-                      </div>
-                    </div>
-                    <div class="text">
-                      Hey guys, I hope this example comment is helping you read this documentation.
-                    </div>
-                  </div>
-                </div>
+                
 
               </div>
               <!--FIM COMENTÁRIOS-->
@@ -165,17 +126,17 @@
 
     <!--OUTROS LIVROS DO AUTOR-->
     <div class="sixteen wide mobile sixteen wide tablet five wide computer column" style="margin-top: 90px;">
-      <h2>Outros livros do autor</h2>
+      <h2>Outros livros</h2>
       <div class="ui items">
+        <%  @outrosLivros.each do |livro| %>
         <div class="item bordered">
           <div class="image">
-            <img src="./img/javaimg.jpg">
+            <img src="/public<%= livro[:url_capa] %>">
           </div>
           <div class="content">
-            <a class="header">Java rápido e fácil</a>
+            <a href="/dashboard/livros/<%= livro[:_id] %>"  class="header"><%= livro[:titulo] %></a>
             <div class="meta">
-              <span>The latest edition of Java in a Nutshell is designed to help experienced Java programmers get the most out of Java
-                7 and 8, but it’s also a learning path for new developers.</span>
+              <span><%= livro[:descricao].slice(1..200) %>...</span>
             </div>
             <div class="description">
               <p></p>
@@ -185,6 +146,7 @@
             </div>
           </div>
         </div>
+        <% end %>
       </div>
     </div>
 

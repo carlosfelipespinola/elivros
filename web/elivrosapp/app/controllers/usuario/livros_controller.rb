@@ -1,4 +1,6 @@
 class Usuario::LivrosController < ApplicationController
+  layout 'application', :except => :ler_livro
+
   def index
     @categorias_livro  = Genero.generos
     @livros = Livro.all.limit(5)
@@ -24,11 +26,26 @@ class Usuario::LivrosController < ApplicationController
   def detalhes
     @categorias_livro  = Genero.generos
     @categoria_buscada = params[:categoria]
-    @livros = Livro.all[0]
+    @livro = Livro.find_by(_id: params[:id])
+    @outrosLivros = Livro.where({ _id: { "$ne": params[:id] } }).limit(3)
+    begin
+      path = @livro[:url_pdf]
+      root = Rails.root.join('public','uploads')
+      full_path = "#{root}#{path}"
+      reader = PDF::Reader.new(full_path)
+      @paginas = reader.page_count
+    rescue => exception
+      @paginas = ""
+    end
+    
   end
 
   def minha_lista
     @categorias_livro  = Genero.generos
     @livros = Livro.all
+  end
+
+  def ler_livro
+    @livro = Livro.find_by(_id: params[:id])
   end
 end
