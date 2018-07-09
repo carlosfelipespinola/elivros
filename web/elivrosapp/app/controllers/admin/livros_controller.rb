@@ -98,5 +98,14 @@ class Admin::LivrosController < ApplicationController
   end
 
   def delete
+    
+    if Livro.where(_id: params[:id]).delete
+      flash[:positive] = "Livro deletado com sucesso"
+    else
+      flash[:negative] = "Ocorreu um erro ao deletar livro"
+    end
+
+    redirect_to '/admin/livros'
+    
   end
 end

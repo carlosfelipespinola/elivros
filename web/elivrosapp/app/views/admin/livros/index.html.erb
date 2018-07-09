@@ -23,10 +23,10 @@
       <% else %>
         <% @livros.each do | livro | %>
           <tr>
-            <td class="collapsing">
-              <div class="ui fitted slider checkbox">
-                <input type="checkbox"> <label></label>
-              </div>
+            <td class="collapsing pointer" style="background-color: rgb(245, 245, 245);">
+              <%= form_tag("/admin/livros/#{livro[:_id]}", method: "delete") do %>
+                <button style="background-color: rgb(245, 245, 245);" class="ui button"><i class="trash alternate outline icon" style="margin:0"></i></button>
+              <% end %>
             </td>
             <td><a href="/admin/livros/<%= livro[:_id] %>"><%= livro.titulo %></a></td>
             <td><a href="/public<%= livro.url_pdf %>" target="_blank" >clique para visualizar</a></td>
@@ -47,12 +47,6 @@
           <button id="btn-cadastrar-livro" class="ui right floated small primary labeled icon button">
             <i class="book icon"></i> Cadastrar livro
           </button>
-          <div class="ui small button">
-            Deletar
-          </div>
-          <div class="ui small  disabled button">
-            Deletar Todos
-          </div>
         </th>
       </tr>
     </tfoot>
