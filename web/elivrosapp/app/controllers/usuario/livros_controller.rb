@@ -13,7 +13,8 @@ class Usuario::LivrosController < ApplicationController
   def categorias
     @categorias_livro  = Genero.generos
     @categoria_buscada = params[:categoria]
-    @livros = Livro.all
+    @livros = Livro.where( { "generos": { "$elemMatch": { "nome": params[:categoria]} }} ).to_a
+    puts @livros
   end
 
   def detalhes
