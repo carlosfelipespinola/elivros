@@ -1,13 +1,17 @@
 class Usuario::LivrosController < ApplicationController
   def index
     @categorias_livro  = Genero.generos
-    @livros = Livro.all
+    @livros = Livro.all.limit(5)
   end
 
   def buscar
     @categorias_livro  = Genero.generos
     @busca = params[:busca]
-    @livros = Livro.all
+    query = {"$or" => [{"titulo": /#{@busca}/i},{"editora": /#{@busca}/i}]}
+    if @busca == ""
+      @busca = "todos"
+    end
+    @livros = Livro.where(query).to_a
   end
 
   def categorias
