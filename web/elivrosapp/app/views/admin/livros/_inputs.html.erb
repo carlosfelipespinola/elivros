@@ -2,12 +2,16 @@
 <div class="container" style="max-width: 400px; margin: auto;">
 <div class="row">
   <div class="column">
-    <%= file_field_tag 'imagem_capa', style: "display: none", accept: "image/*", id: "input-imagem-capa", :required => true %>
+    <%= file_field_tag 'imagem_capa', style: "display: none", accept: "image/*", id: "input-imagem-capa", :required => !(defined? livro and livro != nil) %>
     <img id="img-placeholder" class="ui fluid image" src="/public<%= atributo_ou_string_vazia(livro, :url_capa) %>">
   </div>
 <br>
 <label for="input-imagem-capa" class="fluid ui button">
-  Adicionar imagem
+  <% if livro %>
+    Trocar imagem
+  <% else %>
+    Adicionar imagem
+  <% end %>
 </label>
 <br>
 </div>
@@ -16,15 +20,15 @@
 <div class="three fields">
   <div class="field">    
     <label>Titulo</label>
-    <%= text_field_tag 'titulo', atributo_ou_string_vazia(livro, :titulo), required: true %>
+    <%= text_field_tag 'livro[titulo]', atributo_ou_string_vazia(livro, :titulo), required: true %>
   </div>
   <div class="field">
     <label>Editora</label>
-    <%= text_field_tag 'editora', atributo_ou_string_vazia(livro, :editora), required: true %>
+    <%= text_field_tag 'livro[editora]', atributo_ou_string_vazia(livro, :editora), required: true %>
   </div>
   <div class="field">
     <label>Data publicação</label>
-    <%= date_field 'data_publicacao', atributo_ou_string_vazia(livro, :data_publicacao), required: true %>
+    <%= date_field("livro", "data_publicacao", value: atributo_data_ou_string_vazia(livro, :data_publicacao), required: true) %>
   </div>
 </div>
 
@@ -33,23 +37,36 @@
 <div class="two fields">
 <div class="field">
   <label>Categorias</label>
-  <select multiple="" class="ui dropdown" name="generos[]" required>
+  <select multiple="" value="<%= atributo_ou_string_vazia(livro, :generos) %>" class="ui dropdown" name="livro[generos][]" required>
     <% @categorias.each do |categoria| %>
-      <option value="<%= categoria %>"> <%= categoria.sub("-"," ").capitalize %> </option>
+
+      <% if livro[:generos].any?{ |e| e[:nome] == categoria } %>
+        <option selected value="<%= categoria %>"> <%= categoria.sub("-"," ").capitalize %> </option>
+      <% else %>
+        <option value="<%= categoria %>"> <%= categoria.sub("-"," ").capitalize %> </option>
+      <% end %>
+
     <% end %>
   </select>
 </div>
 
 <div class="field">
-  <label>PDF:</label>
-  <%= file_field_tag :pdf, style: "padding: 7px" %>
+  <label>
+    PDF:
+    <% if livro %>
+      <% if livro[:url_pdf] %>
+        <a href="<%= livro[:url_pdf] %>">Clique para ver o pdf cadastrado</a>
+      <% end %>
+    <% end %>
+  </label>
+  <%= file_field_tag :pdf, style: "padding: 7px", required: !(defined? livro and livro != nil)   %>
 </div>
 
 </div>
 
 <div class="field">
   <label>Descrição</label>
-  <textarea name="descricao" required ></textarea>
+  <textarea name="livro[descricao]" required ><%= atributo_ou_string_vazia(livro, :descricao) %></textarea>
 </div>
 
 

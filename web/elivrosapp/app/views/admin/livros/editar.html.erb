@@ -22,7 +22,7 @@
   <div class="ui segment">
     <%= form_tag({controller: "livros", action: "update"}, multipart: true, method: "put", class: "ui form") do |f| %>
       <%= render partial: '/admin/livros/inputs', locals: {livro: @livro} %>
-      <button class="ui fluid primary button ">Salvar alterações</button>
+      <button type="submit" class="ui fluid primary button ">Salvar alterações</button>
     <% end %>
   </div>
 </div>

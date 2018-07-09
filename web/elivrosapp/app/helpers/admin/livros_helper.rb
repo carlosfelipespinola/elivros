@@ -11,4 +11,9 @@ module Admin::LivrosHelper
     return livro[atributo]
     
   end
+
+  def atributo_data_ou_string_vazia(livro,atributo)
+    data = atributo_ou_string_vazia(livro,atributo)
+    data.to_s.split(" ")[0]
+  end
 end

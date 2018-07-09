@@ -45,9 +45,35 @@ class Admin::LivrosController < ApplicationController
 
   def editar
     @categorias = Genero.generos
-    @livro = Livro.all[0]
+    @livro = Livro.find_by(_id: params[:id])
+  
+    if @livro and @livro[:generos] == nil
+   
+      @livro[:generos] = []
+      @livro[:data_publicacao] = @livro[:data_publicacao].strftime("%m/%d/%Y").split(" ")[0]
+      puts @livro
+    end
   end
 
   def update
+    livro_atualizado = params["livro"]
+    
+    if livro_atualizado[:generos]
+      generos = Array.new
+      livro_atualizado[:generos].each do |genero|
+        generos.push(Genero.new({nome: genero}))
+      end
+      livro_atualizado[:generos] = generos
+    end
+
+    if Livro.find_by_id_and_update(params[:id],livro_atualizado)
+      flash[:positive] = "Livro atualizado com sucesso"
+    else
+      flash[:negative] = "Ocorreu um erro ao atualizar livro"
+    end
+    redirect_to action: editar
+  end
+
+  def delete
   end
 end
