@@ -1,15 +1,16 @@
 <%= render "usuario/partials/menus" %>
 
+<div class="pusher">
+  <div id="main" class="ui container">
 
-<div id="main" class="ui container">
-
-  <div class="ui grid">
-    <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
-      <h1>Livros na categoria <%= @categoria_buscada.sub("-"," ").downcase %></h1>
-    </div>
-    <!--LISTA DE LIVROS-->
-    <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
-      <%= render partial: "usuario/livros/partials/cards-livros", locals: {livros: @livros} %>
+    <div class="ui grid">
+      <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+        <h1>Livros na categoria <%= @categoria_buscada.sub("-"," ").downcase %></h1>
+      </div>
+      <!--LISTA DE LIVROS-->
+      <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+        <%= render partial: "usuario/livros/partials/cards-livros", locals: {livros: @livros} %>
+      </div>
     </div>
   </div>
 </div>

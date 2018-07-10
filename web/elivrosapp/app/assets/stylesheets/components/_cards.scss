@@ -1,0 +1,11 @@
+/*extendendo cards*/
+
+.ui.card.font.responsive{
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 992px){
+  .ui.card.font.responsive{
+    font-size: 1rem;
+  }
+}

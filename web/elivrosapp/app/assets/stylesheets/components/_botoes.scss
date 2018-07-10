@@ -1,0 +1,23 @@
+
+/*Redefinição do botao secundario*/
+.ui.secondary.button, .ui.secondary.buttons .button {
+  background-color: $secundaria;
+  color: $primaria;
+  text-shadow: none;
+  background-image: none;
+  min-width: 260px;
+}
+
+
+
+.ui.mini.button {
+  background-color: $secundaria;
+  color: $primaria;
+  text-shadow: none;
+  background-image: none;
+  min-width: 150px;
+}
+
+.ui.medio.button{
+  min-width: 210px;
+}

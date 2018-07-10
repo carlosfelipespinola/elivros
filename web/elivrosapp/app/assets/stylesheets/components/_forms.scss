@@ -1,0 +1,9 @@
+
+/*Extendendo estilos para input text com icone*/
+.ui.icon.input>input.text.rounded{
+  border-radius: 30px;
+}
+
+.ui.icon.input>input.text.secondary{
+  background-color: $silence;
+}

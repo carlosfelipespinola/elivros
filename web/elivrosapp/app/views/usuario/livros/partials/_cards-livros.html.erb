@@ -1,26 +1,19 @@
-<div class="ui grid" style="padding: 0;">
-  <div class="row">
-  <% livros.each do | livro | %>
-    <div class="seven wide mobile five wide tablet three wide computer column">
-      <div class="ui segment livros ">
-      
-        <div class="item bordered ">
-          <div class="image">
-            <img class="ui fluid image" style="height: 300px" src="/public<%= livro.url_capa %>">
-          </div>
-          <div class="content" style="height: 75px;">
-            <a class="header" href="/dashboard/livros/<%= livro._id %>"><%= livro.titulo %></a>
-            <div class="extra">
-              <div class="ui rating" data-max-rating="5"></div>
-            </div>
-            <div>
-              <p class="preco"></p>
-            </div>
-          </div>
+
+<div class="row centered">
+
+  <div class="ui five doubling cards">
+    <% livros.each do | livro | %>
+      <div class="ui card font responsive">
+
+        <div class="image">
+          <img src="/public<%= livro.url_capa %>">
         </div>
-        
+        <div class="content">
+          <a class="header"><%= livro.titulo %></a>
+        </div>
+
       </div>
-    </div>
-  <% end %>
-  </row>
+    <% end %>
+  </div>
+
 </div>
