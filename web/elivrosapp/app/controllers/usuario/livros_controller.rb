@@ -1,9 +1,11 @@
 class Usuario::LivrosController < ApplicationController
+  before_action :usuario_logado
   layout 'application', :except => :ler_livro
 
   def index
     @categorias_livro  = Genero.generos
     @livros = Livro.all.limit(5)
+
   end
 
   def buscar
@@ -48,4 +50,13 @@ class Usuario::LivrosController < ApplicationController
   def ler_livro
     @livro = Livro.find_by(_id: params[:id])
   end
+
+private
+
+  def usuario_logado
+    if session[:current_user_id] == nil
+      redirect_to '/'
+    end
+  end
+
 end

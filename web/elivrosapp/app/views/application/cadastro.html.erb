@@ -12,55 +12,48 @@
         <div class="center aligned description">
           <p>Cadastre-se para começar a ter acesso ao Elivros</p>
         </div>
+        <%= form_for @usuario, html: {class: "ui form"} do |u| %>
 
-        <form class="ui form">
           <div class="field">
-
-            <input type="text" Nome="first-name" placeholder="Nome">
+            <%= u.label(:nome, "Nome:") %>
+            <%= u.text_field(:nome) %>
           </div>
 
           <div class="field">
-
-            <input type="text" name="Sobrenome" placeholder="Sobrenome">
+            <%= u.label(:sobrenome, "Sobrenome:") %>
+            <%= u.text_field(:sobrenome) %>
           </div>
 
           <div class="field">
-
-            <input type="text" name="E-mail" placeholder="E-mail">
+            <%= u.label(:email, "Email:") %>
+            <%= u.text_field(:email) %>
           </div>
 
           <div class="field">
-
-            <input type="password" name="Senha" placeholder="Senha">
+            <%= u.label(:senha, "Senha:") %>
+            <%= u.password_field(:senha) %>
           </div>
 
           <div class="field">
-            <input type="password" name="Senha" placeholder="Confirme sua senha">
-          </div>
-          <div class="field">
-            <div class="ui checkbox">
-              <input type="checkbox" tabindex="0" class="hidden">
-
-            </div>
-
+            <%= submit_tag("Cadastrar", :class => "ui fluid primary button")%>
           </div>
 
-        </form>
+        <%end%>
 
-        <!-- Finaliza o container de cadastro-->
-        <form class="ui form">
-          <div class="field">
-            <div class="ui checkbox">
-              <input type="checkbox" name="example">
-              <label> Li e Concordo com os
-                <a class="header">Termos e condições</a>
-              </label>
-            </div>
-          </div>
+        <!--&lt;!&ndash; Finaliza o container de cadastro&ndash;&gt;-->
+        <!--<form class="ui form">-->
+          <!--<div class="field">-->
+            <!--<div class="ui checkbox">-->
+              <!--<input type="checkbox" name="example">-->
+              <!--<label> Li e Concordo com os-->
+                <!--<a class="header">Termos e condições</a>-->
+              <!--</label>-->
+            <!--</div>-->
+          <!--</div>-->
 
 
-          <a href="/dashboard" class="ui secondary button">Cadastrar</a>
-        </form>
+          <!--<a href="/dashboard" class="ui secondary button">Cadastrar</a>-->
+        <!--</form>-->
       </div>
     </div>
   </div>

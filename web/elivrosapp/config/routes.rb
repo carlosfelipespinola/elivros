@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root "application#index"
   get 'cadastro', to: "application#cadastro"
+  post 'login', to: "session#create_session"
+  get 'exit', to: "session#destroy_session"
   get 'public/:tipo_arquivo/:nome_arquivo', to: "application#serve_file"
+  resources :usuarios
 
   namespace :admin do
     #este é o modulo do administrador

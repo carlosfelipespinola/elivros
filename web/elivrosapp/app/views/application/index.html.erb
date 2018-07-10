@@ -17,17 +17,17 @@
           <p>Por favor, digite seu E-mail e senha.</p>
         </div>
         
-        <br> 
+        <br>
 
-        <form class="ui form">
+        <%= form_tag({controller: "session", action: "create_session"}, method: "post", class: "ui form") do %>
+
           <div class="field">
-
-            <input type="text" name="E-mail" placeholder="E-mail">
+            <%= text_field_tag 'email', nil,placeholder: 'Email', required: true %>
           </div>
 
           <div class="field">
 
-            <input type="password" name="Senha" placeholder="Senha">
+            <%= text_field_tag 'senha',nil, placeholder: 'Senha', required: true %>
           </div>
 
           <div class="field">
@@ -38,15 +38,13 @@
 
           </div>
 
-        </form>
-
-        <a href="" class="ui secondary button">Entrar</a>
-        </form>
+          <%= submit_tag("Entrar", :class => "ui fluid primary button")%>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
 <center> Não tem uma conta?
-  <a href="/cadastro"> Cadastrar-se</a>
+  <a href="/usuarios/new"> Cadastrar-se</a>
 </center>

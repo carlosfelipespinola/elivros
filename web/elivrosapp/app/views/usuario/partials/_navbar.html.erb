@@ -1,4 +1,7 @@
+<!--suppress ALL -->
+<% usuario = Usuario.find_by(id: session[:current_user_id]) %>
 <div class="ui top attached demo menu">
+
 
   <div class="ui secondary menu top medium ">
 
@@ -6,8 +9,9 @@
       Inicio
     </a>
 
-    <div class="ui simple dropdown item">
-      Categorias<i class="dropdown icon"></i>
+    <div class="ui dropdown item">
+      Categorias
+      <i class="dropdown icon"></i>
       <div class="menu">
         <%= render 'usuario/partials/categorias_livros' %>
       </div>
@@ -26,8 +30,8 @@
       <% end %>
     </div>
 
-    <div class="ui right simple dropdown item">
-      Carlos Felipe
+    <div class="ui right dropdown item">
+      <%= usuario.nome %>
       <i class="dropdown icon"></i>
       <div class="menu">
         <a href="/dashboard/minha-conta" class="item">Minha Conta</a>
@@ -37,3 +41,8 @@
   </div>
 
 </div>
+
+<script>
+
+
+</script>
