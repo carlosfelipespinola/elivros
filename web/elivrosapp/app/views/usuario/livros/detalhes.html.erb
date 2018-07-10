@@ -42,13 +42,8 @@
                 <% end %>
               </a>
             </div>
-            <div>
-              <div class="ui rating" data-max-rating="5"></div>
-            </div>
-
-            <div class="ui hidden divider"></div>
-
-            <div class="ui horizontal list">
+          
+            <div class="ui horizontal list large screen only">
               <div class="item">
                 <a href="#" class="ui medio secondary button">Ler mais tarde</a>
               </div>
@@ -60,6 +55,20 @@
             </div>
 
           </div>
+
+          <div class="sixteen wide column centered mobile tablet computer only">
+            <div class="ui horizontal stackable list centered">
+              <div class="item">
+                <a href="#" class="ui medio secondary button">Ler mais tarde</a>
+              </div>
+              <div class="item">
+                <a href="/dashboard/livros/<%= @livro[:_id] %>/ler"
+                   class="ui medio secondary button"
+                >Ler agora</a>
+              </div>
+            </div>
+          </div>
+
         </div>
         <!--FIM DETALHES LIVRO-->
 
@@ -77,10 +86,10 @@
         <div class="ui grid">
 
           <div class="row">
-            <div class="left floated ten wide column">
+            <div class="left floated column sixteen wide mobile nine wide tablet nine wide computer">
               <h2>Comentários</h2>
             </div>
-            <div class="right floated six wide column">
+            <div class="right floated column sixteen wide mobile seven wide tablet seven wide computer">
               <button class="medium fluid ui secondary button">Comentar</button>
             </div>
           </div>
