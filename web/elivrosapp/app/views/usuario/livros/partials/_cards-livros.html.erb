@@ -9,7 +9,7 @@
           <img src="/public<%= livro.url_capa %>">
         </div>
         <div class="content">
-          <a class="header"><%= livro.titulo %></a>
+          <a class="header" href="/dashboard/livros/<%= livro[:_id] %>" ><%= livro.titulo %></a>
         </div>
 
       </div>
